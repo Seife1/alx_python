@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-""" A module for a function that check if an object is 
+""" A module for a function that check if an object is
     instancec of a specified class"""
+
 
 def inherits_from(obj, a_class):
     """A function which is used to check class inheritance"""
