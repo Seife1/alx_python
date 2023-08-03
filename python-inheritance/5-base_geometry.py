@@ -14,4 +14,12 @@ class MyBaseClass(metaclass=HideInitSubclassMeta):
         return [attr for attr in dir(self.__class__) if attr != '__init_subclass__']
 
 class BaseGeometry(MyBaseClass):
-    pass
+    """A function to raise an exeption"""
+    def area(self):
+        raise Exception ("area() is not implemented")
+    
+    def integer_validator(self, name, value):
+        if type(value) is not int:
+            raise TypeError("{} must be an integer".format(name))
+        if value <= 0:
+            raise ValueError("{} must be greater than 0".format(name))

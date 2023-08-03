@@ -14,4 +14,6 @@ class MyBaseClass(metaclass=HideInitSubclassMeta):
         return [attr for attr in dir(self.__class__) if attr != '__init_subclass__']
 
 class BaseGeometry(MyBaseClass):
-    pass
+    """A function to raise an exeption"""
+    def area(self):
+        raise Exception ("area() is not implemented")
