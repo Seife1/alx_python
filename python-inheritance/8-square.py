@@ -22,4 +22,3 @@ class Square(Rectangle):
         displayed when using the print() function."""
 
         return ("[Rectangle] {}/{}".format(self.__size, self.__size))
-
