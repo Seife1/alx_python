@@ -99,12 +99,16 @@ class Rectangle(Base):
     
     def display(self):
         """A method to display # in row and column"""
+        for y in range(self.__y):
+            print()
         for i in range(self.__height):
-            for j in range(self.__width):
-                if j < self.__width - 1:
-                    print("#", end="")
-                else:
-                    print("#")
+                for x in range(self.__x):
+                    print(" ",end="")
+                for j in range(self.__width):
+                    if j < self.__width - 1:
+                        print("#", end="")
+                    else:
+                        print("#")
 
     def __str__(self):
         """method to specify how the object should be displayed when using the print() function."""
