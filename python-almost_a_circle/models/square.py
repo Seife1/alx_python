@@ -6,21 +6,21 @@ from models.rectangle import Rectangle
 class Square(Rectangle):
     """class Square that inherits from Rectangle"""
 
-    def __init__(self, size, x=0, y=0, id=None):
+    def __init__(self, width, x=0, y=0, id=None):
         """Class constructor"""
-        self.__size = size
-        if type(self.__size) is not int:
+        self.__width = width
+        if type(self.__width) is not int:
             raise TypeError("width must be an integer")
-        if self.__size <= 0:
+        if self.__width <= 0:
             raise ValueError("width must be > 0")
         self.__x = x
         self.__y = y
-        Rectangle.__init__(self, size, size, x, y, id)
+        Rectangle.__init__(self, width, width, x, y, id)
 
     @property
     def size(self):
         """Retrieve the data for a size"""
-        return self.__size
+        return self.__width
     
     @size.setter
     def size(self, width):
@@ -29,9 +29,9 @@ class Square(Rectangle):
             raise TypeError("width must be an integer")
         if width <= 0:
             raise ValueError("width must be > 0")
-        self.__size = width
+        self.__width = width
     
 
     def __str__(self):
         """method to specify how the object should be displayed when using the print() function."""
-        return ("[Square] ({}) {}/{} - {}".format(self.id, self.__x, self.__y, self.__size))
+        return ("[Square] ({}) {}/{} - {}".format(self.id, self.__x, self.__y, self.__width))
