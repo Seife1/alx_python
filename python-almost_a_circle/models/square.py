@@ -18,18 +18,19 @@ class Square(Rectangle):
         Rectangle.__init__(self, size, size, x, y, id)
 
     @property
-    def size(self):
-        """Retrieve the data for a size"""
-        return self.__size
+    def width(self):
+        """Return the value of width"""
+        return self.__width
     
-    @size.setter
-    def size(self, value):
-        """Update the value of size"""
-        if type(value) is not int:
+    @width.setter
+    def width(self, width):
+        """Update the value of width"""
+
+        if type(width) is not int:
             raise TypeError("width must be an integer")
-        if value <= 0:
+        if width <= 0:
             raise ValueError("width must be > 0")
-        self.__size = value
+        self.__width = width
     
 
     def __str__(self):
