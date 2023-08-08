@@ -114,8 +114,20 @@ class Rectangle(Base):
         """method to specify how the object should be displayed when using the print() function."""
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height,))
     
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """A method that assigns an argument to each attribute """
+        if len(args) >= 0:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                if key == "width":
+                    self.__width = value
+                if key == "height":
+                    self.__height = value
+                if key == "x":
+                    self.__x = value
+                if key == "y":
+                    self.__y = value
         if len(args) >= 1:
             self.id = args[0]
         if len(args) >= 2:
