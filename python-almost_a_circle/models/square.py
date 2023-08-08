@@ -34,4 +34,4 @@ class Square(Rectangle):
 
     def __str__(self):
         """method to specify how the object should be displayed when using the print() function."""
-        return ("[Square]] ({}) {}/{} - {}".format(self.id, self.__x, self.__y, self.__size))
+        return ("[Square] ({}) {}/{} - {}".format(self.id, self.__x, self.__y, self.__size))
