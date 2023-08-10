@@ -2,14 +2,12 @@
 """Project - Python Network"""
 
 
-from urllib import request
+import requests
 
-with request.urlopen('https://alu-intranet.hbtn.io/status') as response:
-
-    try:
-        content = response.read().decode('utf-8')
-        print('Body response:')
-        print('\t- type: ', type(content))
-        print("\t- content: ", content,)
-    except Exception as e:
-        print(e)
+if  __name__ == '__main__':
+    response = requests.get('https://alu-intranet.hbtn.io/status')
+    content = response.text
+    
+    print('Body response:')
+    print('\t- type: ', type(content))
+    print("\t- content: ", content,)
