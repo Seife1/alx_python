@@ -2,9 +2,9 @@
 """Project - Python Network"""
 
 
-import urllib.request
+from urllib import request
 
-with urllib.request.urlopen('https://alu-intranet.hbtn.io/status') as response:
+with request.urlopen('https://alu-intranet.hbtn.io/status') as response:
 
     try:
         content = response.read().decode('utf-8')
