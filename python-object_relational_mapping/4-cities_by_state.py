@@ -13,7 +13,7 @@ def main(username, pw, db):
     cursor = mydb.cursor()
     query = """ SELECT cities.id, cities.name, states.name 
                 FROM cities 
-                NATURAL JOIN ON states
+                NATURAL JOIN states
                 ORDER BY cities.id ASC
             """
     
