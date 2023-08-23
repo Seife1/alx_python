@@ -2,8 +2,13 @@
 from the database hbtn_0e_0_usa
 """
 import MySQLdb
+import sys
 
 
+user = sys.argv
+username = user[1]
+password = user[2]
+db = user[3]
 def main(username, password, db):
     
     mydb = MySQLdb.connect(host="localhost", port=3306, user=username,
@@ -15,7 +20,4 @@ def main(username, password, db):
         print(row)
 
 if __name__ == "__main__":
-    username = input("Enter MySQL username: ")
-    password = input("Enter MySQL password: ")
-    db = input("Enter database name: ")
     main(username, password, db)
