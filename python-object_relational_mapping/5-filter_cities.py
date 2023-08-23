@@ -12,7 +12,7 @@ def main(username, pw, db, state):
     mydb = MySQLdb.connect(host="localhost", port=3306, user=username,
                            passwd=pw, db=db, charset="utf8")
     cursor = mydb.cursor()
-    query = """ SELECT cities.id, cities.name
+    query = """ SELECT cities.name
                 FROM cities
                 JOIN states
                 ON cities.state_id = states.id
@@ -22,7 +22,7 @@ def main(username, pw, db, state):
 
     cursor.execute(query, (state,))
 
-    response = cursor.fetchall()
+    response = cursor.fetchone()
     for row in response:
         print(row, end=", ")
 
