@@ -19,9 +19,9 @@ def main(username, password, db, name):
     cursor = mydb.cursor()
     query = """ SELECT *
                 FROM states
-                WHERE name LIKE '{name}' COLLATE utf8_bin
+                WHERE name LIKE '{}' COLLATE utf8_bin
                 ORDER BY states.id ASC
-            """
+            """.format(name)
     cursor.execute(query)
     results = cursor.fetchall()
     for row in results:
