@@ -22,7 +22,7 @@ def main(username, pw, db, state):
 
     cursor.execute(query, (state,))
 
-    response = cursor.fetchone()
+    response = cursor.fetchall()
     for row in response:
         print(row, end=", ")
 
