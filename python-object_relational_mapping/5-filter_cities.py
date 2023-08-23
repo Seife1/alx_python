@@ -23,8 +23,11 @@ def main(username, pw, db, state):
     cursor.execute(query, (state,))
 
     response = cursor.fetchall()
-    for row in response:
-        print(row, end=", ")
+    # Extract city names from the response
+    city_names = [row[0] for row in response]
+
+    # Print city names, separated by commas
+    print(', '.join(city_names))
 
 if __name__ == "__main__":
     username = args[1]
