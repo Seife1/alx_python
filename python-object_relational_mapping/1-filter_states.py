@@ -18,7 +18,7 @@ def main(username, password, db):
     cursor = mydb.cursor()
     query = """ SELECT *
                 FROM states
-                WHERE name LIKE 'N%' COLLATE utf8_bin 
+                WHERE name LIKE 'N%' COLLATE utf8_bin
                 ORDER BY states.id ASC
             """
     cursor.execute(query)
