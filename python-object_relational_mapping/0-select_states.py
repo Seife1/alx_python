@@ -21,5 +21,5 @@ def main(username, password, db):
     for row in results:
         print(row)
 if __name__ == "__main__":
-    
+
     main(username, password, db)
