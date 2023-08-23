@@ -12,7 +12,7 @@ db = user[3]
 
 
 def main(username, password, db):
- 
+
     mydb = MySQLdb.connect(host="localhost", port=3306, user=username,
                            passwd=password, db=db, charset="utf8")
     cursor = mydb.cursor()
@@ -20,6 +20,5 @@ def main(username, password, db):
     results = cursor.fetchall()
     for row in results:
         print(row)
-
 if __name__ == "__main__":
     main(username, password, db)
