@@ -1,18 +1,16 @@
 #!/usr/bin/python3
 """
-    A Python script that, using REST API, for a given employee ID,
-    Returns information about his/her TODO list progress then
-    Extend your Python script to export data in the CSV format.
+A Python script that uses REST API to fetch information about an employee's TODO list progress and exports the data in JSON format.
 
-    Usage:
-    python 2-export_to_JSON.py <employee_id>
+Usage:
+python 2-export_to_JSON.py <employee_id>
 
-    Args:
-        employee_id (int): The ID of the employee to fetch data for.
+Args:
+employee_id (int): The ID of the employee to fetch data for.
 
-    Example:
-        To fetch data for employee ID 1:
-        python3 2-export_to_JSON.py 1
+Example:
+To fetch data for employee ID 1:
+python3 2-export_to_JSON.py 1
 """
 
 import json
