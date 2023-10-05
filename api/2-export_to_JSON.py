@@ -1,4 +1,29 @@
 #!/usr/bin/python3
+"""
+A Python script that exports employee TODO list data to a JSON file.
+
+The script fetches data from a REST API about an employee's TODO items and completion status. It retrieves the employee details and each TODO task, then saves the aggregated data to a JSON file.
+
+It takes a single command line argument - the employee ID.
+
+Usage: 
+  python 2-export_to_JSON.py <employee_id>
+
+Args:
+  employee_id (int): The ID of the employee to export TODO data for.
+
+The script:
+1. Requests the employee details from the API 
+2. Requests the list of TODO tasks from the API
+3. Loops through each task to extract title and status
+4. Adds the data to a list of dictionaries 
+5. Saves the employee ID as key and tasks list as value to a dictionary
+6. Dumps the dictionary to a JSON file named after the employee ID
+
+Example:
+  To export data for employee ID 1:
+  python3 2-export_to_JSON.py 1
+"""
 
 import json
 import requests
