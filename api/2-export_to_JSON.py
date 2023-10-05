@@ -8,7 +8,7 @@
     python 2-export_to_JSON.py <employee_id>
 
     Args:
-        e_id (int): The ID of the employee to fetch data for.
+        employee_id (int): The ID of the employee to fetch data for.
 
     Example:
         To fetch data for employee ID 1:
