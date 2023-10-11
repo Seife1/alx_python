@@ -1,0 +1,1 @@
+**How to create a HTML response in Flask by using a template?**
