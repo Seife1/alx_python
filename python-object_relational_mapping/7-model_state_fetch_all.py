@@ -23,3 +23,4 @@ if __name__ == '__main__':
     username = sys.argv[1]
     password = sys.argv[2]
     dbname = sys.argv[3]
+    state_list(username, password, dbname)
