@@ -6,7 +6,7 @@ from model_state import Base, State
 
 def state_list(username, password, dbname):
     # Create a connection to the database
-    engine = create_engine(f"mysql+mysqldb://'{username}':'{password}'@'localhost:3306/{dbname}'")
+    engine = create_engine(f"mysql+mysqldb://{username}:{password}@localhost:3306/{dbname}")
 
     # Create a session
     Session = sessionmaker(bind=engine)
@@ -17,7 +17,6 @@ def state_list(username, password, dbname):
     for state in states:
         print(f"{state.id}: {state.name}")
 
-    session.close()
 
 if __name__ == '__main__':
     username = sys.argv[1]
