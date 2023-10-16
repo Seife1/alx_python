@@ -17,7 +17,7 @@ def state_list_first(username, password, dbname):
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).order_by(State.id).first()
+    state = session.query(State).first()
 
     if state:
         print(f"{state.id}: {state.name}")
